@@ -2,6 +2,6 @@
 [Desktop Entry]
 Name=Ru Locale no Steam Deck
 Comment=Prescribes Ru localization in the environment and reboots the system
-Exec=curl https://raw.githubusercontent.com/mashakulina/test_steam_deck/main/environment_recovery.sh | pkexec bash -s --
+Exec=curl https://raw.githubusercontent.com/mashakulina/ru_locale_fix_on_steamdeck/main/environment_recovery.sh | pkexec bash -s --
 Terminal=true
 Type=Application
