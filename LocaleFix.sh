@@ -111,6 +111,7 @@ if [[ "$OPTION" == "German" ]]; then
       TRUE "Reboot" \
       FALSE "Later"
       )
+  fi
     # Reboot later
     if [ "$OPTION" == "Later" ]; then
         zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Reboot later"
