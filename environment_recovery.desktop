@@ -1,7 +1,0 @@
-#!/usr/bin/env xdg-open
-[Desktop Entry]
-Name=Environment recovery
-Comment=Recovery the environment and reboots the system
-Exec=curl https://raw.githubusercontent.com/mashakulina/ru_locale_fix_on_steamdeck/main/environment_recovery.sh | pkexec bash -s --
-Terminal=true
-Type=Application
