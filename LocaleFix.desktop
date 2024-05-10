@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Locale on Steam Deck
+Comment=Prescribes Ru localization in the environment and reboots the system
+Exec=sh -c 'rm -f /tmp/LocaleFix.sh; if curl -S -s -L -O --output-dir /tmp/ --connect-timeout 60 https://raw.githubusercontent.com/mashakulina/locale_fix_on_steamdeck/main/LocaleFix.sh; then bash /tmp/LocaleFix.sh; else echo "Something went wrong, please report this if it is a bug"; read; fi'
+Terminal=true
+Type=Application
