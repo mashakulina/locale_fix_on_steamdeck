@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# if a password was set by decky, this will run when the program closes
+# if a password was set, this will run when the program closes
 temp_pass_cleanup() {
   echo $PASS | sudo -S -k passwd -d deck
 }
@@ -57,12 +57,12 @@ if [ "$OPTION" == "Recovery environment" ] ; then
 
     # Reboot/Later
     OPTION=$(zen_nospam --title="Adding a locale" --width=350 --height=100 --list --radiolist --text "Reboot system:" --hide-header --column "Buttons" --column "Choice"\
-    TRUE "Reboot" \
-    FALSE "Later")
+    TRUE "Reboot now" \
+    FALSE "Reboot later")
 
     # Reboot later
-    if [ "$OPTION" == "Later" ]; then
-        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Reboot later"
+    if [ "$OPTION" == "Reboot later" ]; then
+        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Don't forget to reboot your system later"
         exit 0
     else
     # Reboot after recovery
@@ -82,13 +82,13 @@ if [[ "$OPTION" == "Russian" ]]; then
   # Reboot/Later
   if grep -q "$ locale" /etc/environment ; then
       OPTION=$(zen_nospam --title="Adding a locale" --width=350 --height=100 --list --radiolist --text "Reboot system:" --hide-header --column "Buttons" --column "Choice"\
-      TRUE "Reboot" \
-      FALSE "Later"
+      TRUE "Reboot now" \
+      FALSE "Reboot later"
       )
   fi
     # Reboot later
-    if [ "$OPTION" == "Later" ]; then
-        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Reboot later"
+    if [ "$OPTION" == "Reboot later" ]; then
+        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Don't forget to reboot your system later"
         exit 0
     else
     # Reboot after recovery
@@ -108,13 +108,13 @@ if [[ "$OPTION" == "German" ]]; then
   # Reboot/Later
   if grep -q "$ locale" /etc/environment ; then
       OPTION=$(zen_nospam --title="Adding a locale" --width=350 --height=100 --list --radiolist --text "Reboot system:" --hide-header --column "Buttons" --column "Choice"\
-      TRUE "Reboot" \
-      FALSE "Later"
+      TRUE "Reboot now" \
+      FALSE "Reboot later"
       )
   fi
     # Reboot later
-    if [ "$OPTION" == "Later" ]; then
-        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Reboot later"
+    if [ "$OPTION" == "Reboot later" ]; then
+        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Don't forget to reboot your system later"
         exit 0
     else
     # Reboot after recovery
@@ -134,13 +134,13 @@ if [[ "$OPTION" == "French" ]]; then
   # Reboot/Later
   if grep -q "$ locale" /etc/environment ; then
       OPTION=$(zen_nospam --title="Adding a locale" --width=350 --height=100 --list --radiolist --text "Reboot system:" --hide-header --column "Buttons" --column "Choice"\
-      TRUE "Reboot" \
-      FALSE "Later"
+      TRUE "Reboot now" \
+      FALSE "Reboot later"
       )
   fi
     # Reboot later
-    if [ "$OPTION" == "Later" ]; then
-        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Reboot later"
+    if [ "$OPTION" == "Reboot later" ]; then
+        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Don't forget to reboot your system later"
         exit 0
     else
     # Reboot after recovery
@@ -160,13 +160,13 @@ if [[ "$OPTION" == "Spanish" ]]; then
   # Reboot/Later
   if grep -q "$ locale" /etc/environment ; then
       OPTION=$(zen_nospam --title="Adding a locale" --width=350 --height=100 --list --radiolist --text "Reboot system:" --hide-header --column "Buttons" --column "Choice"\
-      TRUE "Reboot" \
-      FALSE "Later"
+      TRUE "Reboot now" \
+      FALSE "Reboot later"
       )
   fi
     # Reboot later
-    if [ "$OPTION" == "Later" ]; then
-        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Reboot later"
+    if [ "$OPTION" == "Reboot later" ]; then
+        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Don't forget to reboot your system later"
         exit 0
     else
     # Reboot after recovery
@@ -186,13 +186,13 @@ if [[ "$OPTION" == "Spanish (Mexico)" ]]; then
   # Reboot/Later
   if grep -q "$ locale" /etc/environment ; then
       OPTION=$(zen_nospam --title="Adding a locale" --width=350 --height=100 --list --radiolist --text "Reboot system:" --hide-header --column "Buttons" --column "Choice"\
-      TRUE "Reboot" \
-      FALSE "Later"
+      TRUE "Reboot now" \
+      FALSE "Reboot later"
       )
   fi
     # Reboot later
-    if [ "$OPTION" == "Later" ]; then
-        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Reboot later"
+    if [ "$OPTION" == "Reboot later" ]; then
+        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Don't forget to reboot your system later"
         exit 0
     else
     # Reboot after recovery
@@ -212,13 +212,13 @@ if [[ "$OPTION" == "Italian" ]]; then
   # Reboot/Later
   if grep -q "$ locale" /etc/environment ; then
       OPTION=$(zen_nospam --title="Adding a locale" --width=350 --height=100 --list --radiolist --text "Reboot system:" --hide-header --column "Buttons" --column "Choice"\
-      TRUE "Reboot" \
-      FALSE "Later"
+      TRUE "Reboot now" \
+      FALSE "Reboot later"
       )
   fi
     # Reboot later
-    if [ "$OPTION" == "Later" ]; then
-        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Reboot later"
+    if [ "$OPTION" == "Reboot later" ]; then
+        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Don't forget to reboot your system later"
         exit 0
     else
     # Reboot after recovery
@@ -238,13 +238,13 @@ if [[ "$OPTION" == "Portuguese" ]]; then
   # Reboot/Later
   if grep -q "$ locale" /etc/environment ; then
       OPTION=$(zen_nospam --title="Adding a locale" --width=350 --height=100 --list --radiolist --text "Reboot system:" --hide-header --column "Buttons" --column "Choice"\
-      TRUE "Reboot" \
-      FALSE "Later"
+      TRUE "Reboot now" \
+      FALSE "Reboot later"
       )
   fi
     # Reboot later
-    if [ "$OPTION" == "Later" ]; then
-        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Reboot later"
+    if [ "$OPTION" == "Reboot later" ]; then
+        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Don't forget to reboot your system later"
         exit 0
     else
     # Reboot after recovery
@@ -264,13 +264,13 @@ if [[ "$OPTION" == "Portuguese (Brazil)" ]]; then
   # Reboot/Later
   if grep -q "$ locale" /etc/environment ; then
       OPTION=$(zen_nospam --title="Adding a locale" --width=350 --height=100 --list --radiolist --text "Reboot system:" --hide-header --column "Buttons" --column "Choice"\
-      TRUE "Reboot" \
-      FALSE "Later"
+      TRUE "Reboot now" \
+      FALSE "Reboot later"
       )
   fi
     # Reboot later
-    if [ "$OPTION" == "Later" ]; then
-        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Reboot later"
+    if [ "$OPTION" == "Reboot later" ]; then
+        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Don't forget to reboot your system later"
         exit 0
     else
     # Reboot after recovery
@@ -290,13 +290,13 @@ if [[ "$OPTION" == "Chinese" ]]; then
   # Reboot/Later
   if grep -q "$ locale" /etc/environment ; then
       OPTION=$(zen_nospam --title="Adding a locale" --width=350 --height=100 --list --radiolist --text "Reboot system:" --hide-header --column "Buttons" --column "Choice"\
-      TRUE "Reboot" \
-      FALSE "Later"
+      TRUE "Reboot now" \
+      FALSE "Reboot later"
       )
   fi
     # Reboot later
-    if [ "$OPTION" == "Later" ]; then
-        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Reboot later"
+    if [ "$OPTION" == "Reboot later" ]; then
+        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Don't forget to reboot your system later"
         exit 0
     else
     # Reboot after recovery
@@ -316,13 +316,13 @@ if [[ "$OPTION" == "Japanese" ]]; then
   # Reboot/Later
   if grep -q "$ locale" /etc/environment ; then
       OPTION=$(zen_nospam --title="Adding a locale" --width=350 --height=100 --list --radiolist --text "Reboot system:" --hide-header --column "Buttons" --column "Choice"\
-      TRUE "Reboot" \
-      FALSE "Later"
+      TRUE "Reboot now" \
+      FALSE "Reboot later"
       )
   fi
     # Reboot later
-    if [ "$OPTION" == "Later" ]; then
-        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Reboot later"
+    if [ "$OPTION" == "Reboot later" ]; then
+        zen_nospam --title="Adding a locale" --width=150 --height=40 --info --text "Don't forget to reboot your system later"
         exit 0
     else
     # Reboot after recovery
