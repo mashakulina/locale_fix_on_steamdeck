@@ -29,7 +29,7 @@ fi
 
 # if locale is already present in environment, then add 'recovery' option
 if grep -q "$ locale" /etc/environment ; then
-    OPTION=$(zen_nospam --title="Adding a locale" --width=350 --height=200 --list --radiolist --text "The locale is already present in environment\nSelect Option:" --hide-header --column "Buttons" --column "Choice"\
+    OPTION=$(zen_nospam --title="Adding a locale" --width=350 --height=200 --list --radiolist --text "The locale is already added\nSelect Option:" --hide-header --column "Buttons" --column "Choice"\
     TRUE "Recovery system file" \
     )
 else
