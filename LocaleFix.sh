@@ -30,7 +30,7 @@ fi
 # if locale is already present in environment, then add 'recovery' option
 if grep -q "$ locale" /etc/environment ; then
     OPTION=$(zen_nospam --title="Adding a locale" --width=350 --height=200 --list --radiolist --text "The locale is already present in environment\nSelect Option:" --hide-header --column "Buttons" --column "Choice"\
-    TRUE "Recovery environment" \
+    TRUE "Recovery system file" \
     )
 else
     OPTION=$(zen_nospam --title="Adding a locale" --width=350 --height=350 --list --radiolist --text "Select language to install:" --hide-header --column "Buttons" --column "Choice"\
@@ -47,8 +47,8 @@ else
     )
 fi
 
-# recovery environment if recovery option was selected
-if [ "$OPTION" == "Recovery environment" ] ; then
+# Recovery system file if recovery option was selected
+if [ "$OPTION" == "Recovery system file" ] ; then
     (
     echo "Delete old Environment...";
     sudo rm /etc/environment
