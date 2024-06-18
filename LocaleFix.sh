@@ -17,6 +17,9 @@ if (( $EUID != 0 )); then
     # get password
     while [ "$PASSWORD" != "true" ]; do
         PASS=$(zen_nospam --title="Adding a locale" --width=300 --height=100 --entry --hide-text --text="Enter your sudo/admin password")
+        if [[ $? -eq 1 ]] || [[ $? -eq 5 ]]; then
+        exit 1
+        fi
     if ( echo "$PASS" | sudo -S -k true ); then
         PASSWORD="true"
     else
